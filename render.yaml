@@ -3,7 +3,6 @@ services:
   - type: web
     name: streamlit-app
     env: docker
-    buildCommand: docker build -t streamlit-app .
-    startCommand: docker run -p 8501:8501 streamlit-app
-    instanceCount: 1
     plan: free
+    healthCheckPath: /
+    autoDeploy: true
